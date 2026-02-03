@@ -1,0 +1,12 @@
+{
+  "name": "FX Discipline & Risk Mentor",
+  "short_name": "FX Mentor",
+  "description": "A professional-grade Forex education and execution platform focused on risk management, behavioral analytics, and progressive learning.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#4f46e5",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
