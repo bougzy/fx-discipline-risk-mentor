@@ -20,7 +20,7 @@ export const RiskCalculator: React.FC<RiskCalculatorProps> = ({
 
   useEffect(() => {
     if (!entryPrice || !stopLoss) return;
-    
+
     const pipsAtRisk = Math.abs(entryPrice - stopLoss) * 10000;
     if (pipsAtRisk <= 0) {
       setError("Invalid Stop Loss");
@@ -39,7 +39,8 @@ export const RiskCalculator: React.FC<RiskCalculatorProps> = ({
       const lotSize = Number((currentRiskAmount / (pipsAtRisk * 10)).toFixed(2));
       onValidRisk(lotSize, currentRiskAmount);
     }
-  }, [riskPercent, entryPrice, stopLoss, balance, onValidRisk]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [riskPercent, entryPrice, stopLoss, balance]);
 
   return (
     <div className="bg-slate-900/50 p-4 border border-slate-800 rounded-lg">
